@@ -1,0 +1,139 @@
+@import '../abstracts/mixins';
+@import '../abstracts/breakpoints';
+
+.button {
+  
+  &--tab {
+    position: relative;
+    width: 100%;
+
+    outline: none;
+
+    padding-block: 1rem;
+    
+    font-family: var(--ff-spartan);
+    font-size: var(--heading-h3);
+    font-weight: var(--fw-700);
+    letter-spacing: 1.93px;
+    text-transform: uppercase;
+
+    transition: background-color var(--transition-1);
+
+    &:is(:hover, :focus) {
+      background-color: #{$neutral-700};
+    }
+
+    &-number,
+    &-text {
+      pointer-events: none;
+    }
+    
+    &-number {
+      color: #{$neutral-100};
+      opacity: 0.6;
+    }
+    
+    &-text {
+      color: #{$neutral-100};
+    }
+
+    @include mobile-only {
+      border-bottom-style: solid;
+      border-bottom-color: transparent;
+      border-bottom-width: 0.1875rem;
+    }
+
+    @include tablet {
+      @include flex(row, center);
+      gap: 1rem;
+
+      border: 1px solid #{$neutral-700};
+
+      padding-inline: 1.5rem;
+    }
+
+    @include desktop {
+      padding-block: 1.125rem;
+    }
+  }
+}
+
+[data-planet='Mercury'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$mercury};
+  }
+
+  @include tablet {
+    background-color: #{$mercury};
+  }
+}
+
+[data-planet='Venus'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$venus};
+  }
+  
+  @include tablet {
+    background-color: #{$venus};
+  }
+}
+
+[data-planet='Earth'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$earth};
+  }
+  
+  @include tablet {
+    background-color: #{$earth};
+  }
+}
+
+[data-planet='Mars'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$mars} ;
+  }
+  
+  @include tablet {
+    background-color: #{$mars};
+  }
+}
+
+[data-planet='Jupiter'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$jupiter};
+  }
+  
+  @include tablet {
+    background-color: #{$jupiter};
+  }
+}
+
+[data-planet='Saturn'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color:  #{$saturn};;
+  }
+  
+  @include tablet {
+    background-color:  #{$saturn};;
+  }
+}
+
+[data-planet='Uranus'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$uranus};
+  }
+  
+  @include tablet {
+    background-color: #{$uranus};
+  }
+}
+
+[data-planet='Neptune'] .button--tab.selected {
+  @include mobile-only {
+    border-bottom-color: #{$neptune};
+  }
+  
+  @include tablet {
+    background-color: #{$neptune};
+  }
+}

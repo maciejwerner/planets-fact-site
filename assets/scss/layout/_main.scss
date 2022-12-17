@@ -1,0 +1,23 @@
+@import '../abstracts/mixins';
+@import '../abstracts/breakpoints';
+
+.main {
+  @include flex;
+
+  @include tablet {
+    @include flex(row, center)
+  }
+
+  .container--main {
+    display: grid;
+    gap: 3rem;
+
+    @include tablet {
+      gap: 5rem;
+    }
+
+    @include desktop {
+      gap: 8rem;
+    }
+  }
+}

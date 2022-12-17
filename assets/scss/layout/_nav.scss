@@ -1,0 +1,167 @@
+@import '../abstracts/breakpoints';
+@import '../abstracts/mixins';
+
+@keyframes menuItemFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav {
+  width: 100%;
+
+  @include desktop {
+    width: 50%;
+  }
+
+  @include mobile-only {
+    position: absolute;
+    z-index: 100;
+    inset: 5rem 0 0 0;
+    width: 90%;
+    height: 100%;
+    margin-inline: auto;
+  }
+
+  .menu {
+    @include flex(row, center);
+    background-color: #{$neutral-900};
+    column-gap: 1.5rem;
+
+    @include mobile-only {
+      @include flex(column);
+      height: 91%;
+      transform: translateX(-110%);
+      transition: transform var(--transition-2);
+      will-change: transform;
+
+      background-image: url('../images/background-stars.svg');
+      background-repeat: no-repeat;
+    }
+
+    &:is(:hover, :focus-within) .menu__link:not(:hover, :focus) { opacity: 0.75; }
+
+    &__item {
+      display: inline-flex;
+      width: 100%;
+
+      @include mobile-only {
+        padding-block: 0.5rem;
+        border-bottom: 1px solid #{$neutral-700};
+        flex: 1;
+
+        opacity: 0;
+      }
+    }
+
+    &__link {
+      width: 100%;   
+      padding-block: 0.5rem;  
+
+      color: #{$neutral-100};
+      font-size: var(--heading-h4);
+      font-family: var(--ff-spartan);
+      font-weight: var(--fw-700);
+      text-transform: uppercase;
+      letter-spacing: var(--spacing-1);
+
+      transition: opacity var(--transition-2);
+      will-change: opacity;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+
+        @include mobile-only {
+          left: -2.5rem;
+
+          --size: 1.45rem;
+          width: var(--size);
+          height: var(--size);
+          border-radius: 50%;
+        }
+
+        @include tablet {
+          bottom: -1rem;
+          left: 0;
+          width: 100%;
+          height: 0.1875rem;  // 3px
+          transform: scaleX(0);
+          transition: transform var(--transition-2);
+        }
+
+        @include desktop {
+          top: -1.6rem;
+          height: 0.3125rem;  // 5px
+        }
+      }
+
+      @include mobile-only {
+        @include flex(row, center, space-between);
+
+        font-size: 0.9375rem;
+        letter-spacing: 1.36px;
+        margin-left: 2.75rem;
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      @include tablet {
+        &.selected::before,
+        &:is(:hover, :focus)::before {
+          transform: scaleX(1);
+        }
+      }
+
+      &[data-planet='Mercury']::before {
+        background-color: #{$mercury};
+      }
+
+      &[data-planet='Venus']::before {
+        background-color: #{$venus};
+      }
+
+      &[data-planet='Earth']::before {
+        background-color: #{$earth};
+      }
+
+      &[data-planet='Mars']::before {
+        background-color: #{$mars};
+      }
+
+      &[data-planet='Jupiter']::before {
+        background-color: #{$jupiter};
+      }
+
+      &[data-planet='Saturn']::before {
+        background-color: #{$saturn};
+      }
+
+      &[data-planet='Uranus']::before {
+        background-color: #{$uranus};
+      }
+
+      &[data-planet='Neptune']::before {
+        background-color: #{$neptune};
+      }
+    }
+
+    &__icon {
+      transition: fill var(--transition-1);
+
+      &--wrapper {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+}

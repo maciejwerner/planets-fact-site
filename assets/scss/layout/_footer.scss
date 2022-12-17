@@ -1,0 +1,9 @@
+@import '../abstracts/breakpoints';
+@import '../abstracts/mixins';
+
+.footer {
+  @include mobile-only {
+    margin-top: 2rem;
+  }
+}
+

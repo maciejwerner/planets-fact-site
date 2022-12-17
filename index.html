@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>Planets Fact</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- https://github.com/astragenius/planet-facts-site -->
+    <!-- https://github.com/davidrhyne/planets-fact-site -->
+    <!-- https://github.com/tediko/planets-fact -->
+  </head>
+  <body class="body" data-selector-body>
+    <header class="header">
+      <div class="container container--default">
+        <div class="header__container">
+          <a href="#" class="link logo logo__link">the planets</a>
+
+          <button
+            type="button"
+            class="button hamburger"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            data-hamburger-btn>
+            <span class="span" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="17"
+                class="hamburger__icon">
+                <g fill="#FFF" fill-rule="evenodd">
+                  <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+                </g>
+              </svg>
+            </span>
+          </button>
+
+          <nav class="nav" id="primary-navigation">
+            <ul class="menu" role="list" data-nav-menu>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="link menu__link"
+                  title="Mercury page"
+                  data-planet="Mercury"
+                  >mercury
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="link menu__link"
+                  title="Venus page"
+                  data-planet="Venus"
+                  >venus
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="link menu__link selected"
+                  title="Earth page"
+                  data-planet="Earth"
+                  >earth
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="link menu__link"
+                  title="Mars page"
+                  data-planet="Mars"
+                  >mars
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="link menu__link" data-planet="Jupiter"
+                  >jupiter
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="link menu__link" data-planet="Saturn"
+                  >saturn
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="link menu__link" data-planet="Uranus"
+                  >uranus
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="link menu__link" data-planet="Neptune"
+                  >neptune
+                  <span class="span menu__icon--wrapper" aria-hidden="true"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="6"
+                      height="8"
+                      class="menu__icon">
+                      <path
+                        fill="none"
+                        stroke="#FFF"
+                        opacity=".4"
+                        d="M1 0l4 4-4 4" /></svg></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container container--main">
+        <section class="section fact" id="fact" data-reveal="bottom">
+          <nav class="tabs-list--wrapper" aria-label="Secondary navigation">
+            <ul class="tabs-list">
+              <li class="tabs-list__item">
+                <button
+                  type="button"
+                  class="button button--tab selected"
+                  data-tab-overview
+                  data-tab-btn>
+                  <span
+                    class="span span--hide button--tab-number"
+                    aria-hidden="true"
+                    >01</span
+                  >
+                  <span class="span button--tab-text">overview</span>
+                </button>
+              </li>
+              <li class="tabs-list__item">
+                <button
+                  type="button"
+                  class="button button--tab"
+                  data-tab-structure
+                  data-tab-btn>
+                  <span
+                    class="span span--hide button--tab-number"
+                    aria-hidden="true"
+                    >02</span
+                  >
+                  <span class="span button--tab-text"
+                    ><span class="span span--hide">internal</span>
+                    structure</span
+                  >
+                </button>
+              </li>
+              <li class="tabs-list__item">
+                <button
+                  type="button"
+                  class="button button--tab"
+                  data-tab-geology
+                  data-tab-btn>
+                  <span
+                    class="span span--hide button--tab-number"
+                    aria-hidden="true"
+                    >03</span
+                  >
+                  <span class="span button--tab-text"
+                    >surface <span class="span span--hide">geology</span></span
+                  >
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="fact__image--wrapper" data-show>
+            <figure>
+              <img
+                src="./assets/images/earth.png"
+                alt=""
+                class="fact__image"
+                data-planet-image />
+            </figure>
+            <div class="fact__surface--wrapper">
+              <figure>
+                <img src="" alt="" data-surface-image />
+              </figure>
+            </div>
+          </div>
+
+          <div class="fact__info--wrapper">
+            <h1 class="fact__title" data-hero-title></h1>
+            <p class="fact__text" data-hero-text></p>
+            <div class="fact__source--wrapper">
+              <span class="span fact__source--title">source</span>
+              <a
+                href=""
+                class="link fact__source--link"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-source-link
+                >wikipedia
+                <span class="span" aria-hidden="true"
+                  ><img src="./assets/images/icon-source.svg" alt="" /></span
+              ></a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section details"
+          id="details"
+          data-selector-details
+          data-reveal="top">
+          <h2 class="sr-only">Details</h2>
+          <ul class="details-list">
+            <li>
+              <article class="details-card">
+                <h4 class="details-card__title">rotation time</h4>
+                <span class="details-card__data" data-rotation-time></span>
+              </article>
+            </li>
+            <li>
+              <article class="details-card">
+                <h4 class="details-card__title">revolution time</h4>
+                <span class="details-card__data" data-revolution-time></span>
+              </article>
+            </li>
+            <li>
+              <article class="details-card">
+                <h4 class="details-card__title">radius</h4>
+                <span class="details-card__data" data-radius></span>
+              </article>
+            </li>
+            <li>
+              <article class="details-card">
+                <h4 class="details-card__title">average temp.</h4>
+                <span class="details-card__data" data-average-temp></span>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container container--main">
+        <p class="attribution">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f"
+            class="link attribution__link"
+            title="Visit Frontend Mentor challenge page"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="#"
+            class="link attribution__link"
+            title="Visit my github page"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Maciej Werner</a
+          >. 2022 | 12.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/utils.js" type="module"></script>
+    <script src="./assets/js/listeners.js" type="module"></script>
+    <script src="./assets/js/render.js" type="module"></script>
+  </body>
+</html>

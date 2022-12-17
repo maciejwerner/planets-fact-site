@@ -1,0 +1,11 @@
+@import '../abstracts/mixins';
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+
+  &:is(:focus, :focus-within) {
+    outline: none;
+  }
+}

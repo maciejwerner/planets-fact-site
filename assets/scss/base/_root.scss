@@ -1,0 +1,114 @@
+@import '../abstracts/breakpoints';
+@import '../abstracts/colors';
+
+:root {
+  /* font-sizes */
+  --heading-h1: 2.55rem;     // 40px
+  --heading-h2: 1.25rem;     // 20px
+  --heading-h3: 0.563rem;    // 9px 
+  --heading-h4: 0.5rem;      // 8px 
+  --body-base: 0.6875rem;    // 11px 
+   
+  /* font-families */
+  --ff-antonio: 'Antonio', sans-serif;
+  --ff-spartan: 'Spartan', sans-serif;
+
+  /* font colors */
+  --clr-body: #{$neutral-700};
+  --clr-text: #{$neutral-100};
+  --clr-text-dark: #{$neutral-700};
+
+  /* planet colors */
+  --clr-mercury: #{$mercury};
+  --clr-venus: #{$venus};
+  --clr-earth: #{$earth};
+  --clr-mars:  #{$mars};
+  --clr-jupiter: #{$jupiter};
+  --clr-saturn: #{$saturn};
+  --clr-uranus: #{$uranus};
+  --clr-neptune: #{$neptune};
+
+  /* font weights */
+  --fw-400: 400;  // regular
+  --fw-500: 500;  // medium
+  --fw-700: 700;  // bold
+ 
+  /* transitions */
+   --transition-1: 250ms ease;
+   --transition-2: 300ms ease-in-out;
+   --transition-3: 350ms ease-in-out;
+   --transition-4: 750ms ease-in-out;
+
+   /* letter spacing */
+   --spacing-1: 1px;
+   --spacing-15: 1.5px;
+   --spacing-26: 2.57px;
+
+   --spacing-minus-1: -1.05px;
+   --spacing-minus-15: -1.5px;
+
+
+  @include tablet {
+    --heading-h1: 3rem;        // 48px 
+    --heading-h2: 1.5rem;      // 24px 
+    --heading-h3: 0.563rem;    // 9px 
+    --heading-h4: 0.5rem;      // 8px 
+    --body-base: 0.6875rem;    // 11px 
+  }
+
+  @include desktop {
+    --heading-h1: 5rem;        // 80px - line height: 103px - 1.28, fw - antonio medium, spacing 1.5
+    --heading-h2: 2.5rem;      // 40px - line height: 52px - 1.3, fw - antonio medium, spacing 1.5
+    --heading-h3: 0.75rem;     // 12px - line height: 25px - 2, fw - spartan bold, spacing 2.6
+    --heading-h4: 0.687rem;    // 11px - line height: 25px - 2.27, fw - spartan bold, spacing 1
+    --body-base: 0.875rem;     // 14px - line-height: 25px - 1.7, fw - spartan regular
+  }
+}
+
+/* 
+  mobile: 
+  logo - fs 28px antonio regular  / spacing -1.05
+  links as header - fs 15px spartan bold  / spacing 1px, color #fff
+
+  h1 - text title - fs 40px antonio regular
+  body-base - text hero - fs 11px spartan regular   / spacing 0, color #fff
+  source - fs 12px spartan medium / spartan bold
+
+  h3 - nr - fs 9px spartan bold / spartan bold    / spacing 1.93px 
+
+  details  - height: 48px, width: 327px
+  h4 - details title - fs 8px spartan bold    / spacing 1px
+  h2 - details data - fs 20px antonio regular  / spacing -1.5px
+*/
+
+/* 
+  tablet: 
+  logo - fs 28px antonio regular
+  h4 - links as header - fs 11px spartan bold
+
+  h1 - text title - fs 48px antonio regular
+  body-base - text hero - fs 11px spartan regular
+  source - fs 12px spartan medium / spartan bold
+
+  h3 - nr - fs 9px spartan bold / spartan bold  -  height: 40px, width: 281px   / spacing 1.93px 
+
+  details  - height: 88px, width: 164px
+  h4 - details title - fs 8px spartan bold
+  h2 - details data - fs 24px antonio regular
+*/
+
+/* 
+  desktop: 
+  logo - fs 28px antonio regular  / letter-spacing : -1.05px
+  h4 - links as header - fs 11px spartan bold
+
+  h1 - hero title - fs 80px antonio regular
+  body-base - text hero - fs 14px spartan regular
+  body-base - source - fs 14px spartan medium / spartan bold
+
+  h3 - nr - fs 12px spartan bold / spartan bold   -  height: 48px, width: 350px    / spacing 2.57px 
+
+  details  - height: 128px, width: 255px
+  h4 - details title - fs 11px spartan bold
+  h2 - details data - fs 40px antonio regular
+*/

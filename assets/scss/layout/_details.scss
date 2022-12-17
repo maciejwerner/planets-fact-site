@@ -1,0 +1,68 @@
+@import '../abstracts/breakpoints';
+@import '../abstracts/mixins';
+@import '../abstracts/colors';
+
+.details {
+  position: relative;
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.65rem;
+    }
+  }
+
+  &-card {
+    @include flex(row, center, space-between);
+
+    border: 1px solid #{$neutral-700};
+    padding-block: 0.625rem;
+    padding-inline: 1.5rem;
+
+    @include tablet {
+      @include flex(column, flex-start, space-between);
+      gap: 0.5rem;
+
+      padding-block: 1.75rem;
+    }
+
+    @include desktop {
+      padding-block: 2.1rem;
+    }
+
+    &__title {
+      color: #{$neutral-200};
+      font-family: var(--ff-spartan);
+      font-size:  var(--heading-h4);
+      font-weight: var(--fw-700);
+      text-transform: uppercase;
+      letter-spacing: var(--spacing-1);
+      letter-spacing: 0.73px;
+
+      @include desktop {
+        letter-spacing: 1px;
+      }
+    }
+
+    &__data {
+      color: #{$neutral-100};
+      font-family: var(--ff-antonio);
+      font-weight: var(--fw-400);
+      font-size: var(--heading-h2);
+      text-transform: uppercase;
+      letter-spacing: -0.75px;
+
+      @include tablet {
+        letter-spacing: -0.9px;
+      }
+
+      @include desktop {
+        letter-spacing: -1.5px;
+      }
+    }
+  }
+}

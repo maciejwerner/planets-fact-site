@@ -1,0 +1,78 @@
+@import '../abstracts/breakpoints';
+@import '../abstracts/mixins';
+
+.header {
+  padding-block: 1.55rem;
+  border-bottom: 1px solid #{$neutral-700};
+
+  @include tablet {
+    padding-block: 1.55rem 1rem
+  }
+
+  @include desktop {
+    padding-block: 1.55rem;
+  }
+
+  &__container {
+    @include flex(row, center, space-between);
+
+    @include tablet {
+      @include flex(column);
+      gap: 1.5rem;
+    }
+
+    @include desktop {
+      @include flex(row, center, space-between);
+    }
+  }
+
+  .logo {
+    color: #{$neutral-100};
+    font-family: var(--ff-antonio);
+    font-size: 1.75rem;
+    font-weight: var(--fw-400);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing-minus-1);
+
+    @include tablet {
+      text-align: center;
+    }
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .hamburger {
+    display: inline-block;
+
+    &__icon {
+      pointer-events: none;
+      transition: opacity var(--transition-1);
+      will-change: opacity;
+    }
+
+    &[aria-expanded="true"] .hamburger__icon {
+      opacity: 0.5;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include mobile-only {
+    .hamburger[aria-expanded="false"] + .nav {
+      visibility: hidden;
+      transition: visibility var(--transition-2);
+    }
+
+    .hamburger[aria-expanded="true"] + .nav {
+      visibility: visible;
+    }
+
+    .hamburger[aria-expanded="true"] + .nav .menu {
+      transform: translateX(0);
+    }
+  }
+}

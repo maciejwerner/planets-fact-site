@@ -1,0 +1,47 @@
+.attribution {
+  color: #{$neutral-200};
+  font-size: var(--body-base);
+  font-family: var(--ff-spartan);
+  font-weight: var(--fw-400);
+  text-align: center;
+  overflow-wrap: break-word;
+
+  padding-block: 1rem;
+
+  &__link {
+    position: relative;
+    padding-left: 0.25rem;
+
+    color: #{$neutral-100};
+
+    transition: color var(--transition-1);
+    will-change: color;
+
+    &::before {
+      content: '';
+      display: block;
+      
+      position: absolute;
+      z-index: 10;
+      bottom: -1px;
+      left: 0;
+      
+      height: 1px;
+      width: 100%;
+
+      background-color: #{$neutral-100};
+
+      transform: scale(0);
+      transition: transform var(--transition-1);
+      will-change: scale;
+    }
+
+    &:is(:hover , :focus) {
+      color: #{$neutral-100};
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+}
