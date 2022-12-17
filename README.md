@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [@github]()
-- Live Site URL: [@github pages]()
+- Solution URL: [@github](https://github.com/maciejwerner/planets-fact-site)
+- Live Site URL: [@github pages](https://maciejwerner.github.io/planets-fact-site/)
 
 ## My process
 
